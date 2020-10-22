@@ -27,8 +27,7 @@ Here are the basic steps to mill a PCB
 
     - Specify your tool diameter (1mm), Cut Z: (-1.6mm), Multi-Depth (depth per cut - 0.2mm), Gap size (1mm)
     - Click on Generate Freeform Geometry. This will generate a geometry for cutting the board
-    - Double click the newly created Geometry
-
+    - Double click the newly created Geometry<br />
 ![image.png](/.attachments/3.png)
     - Specify: 
       - Cut Z: -1.6
@@ -39,8 +38,7 @@ Here are the basic steps to mill a PCB
       - Spindle speed: 10000
       - PostProcessor: grbl_11
     - Click on Generate CNCJob object
-    - Double click the Gerber_Drill_PTH (under Excellon)
-
+    - Double click the Gerber_Drill_PTH (under Excellon)<br />
 ![image.png](/.attachments/4.png)
     - Specify: 
       - Cut Z: -1.700
@@ -48,14 +46,13 @@ Here are the basic steps to mill a PCB
       - Feedrate Z: 20.00
       - Spindle speed: 10000
       - Drill tool dia: 1.00 (or whatever your tool is)
-      - PostProcessor: grbl_11
-      
+      - PostProcessor: grbl_11<br />
 ![image.png](/.attachments/5.png)
     - Click on Create Drills GCode
     - Double click the TopLayer (or BottomLayer, whatever you want to mill)
     - Specify:
       - Tool dia: 0.1000 (or whatever the tip of your V-bit is)
-      - Passes: 1
+      - Passes: 1<br />
 ![image.png](/.attachments/6.png)
     - Click on Generate Isolation Geometry
     - Specify:
