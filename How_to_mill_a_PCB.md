@@ -16,19 +16,19 @@ Here are the basic steps to mill a PCB
     - Edit the outline if needed
     - Go to File > Generate PCB Fabrication file
     - Click on Generate Gerber - this will save a ZIP file with all needed Gerber files
-![image.png](/.attachments/1.png)
+      ![image.png](/.attachments/1.png)
 
 1. Create the G-Code (FlatCAM)
     - Open FlatCAM (described version is 8.9.9.1b)
     - File > Open > Open Gerber and load the Gerber_BoardOutline as well as Gerber_BottomLayer, TopLayer etc. 
     - File > Open > Open Excellon and load the Gerber_Drill paths that you have 
     - Select the Gerber_BoardOutline file and go to Tool > Cutout PCB
-![image.png](/.attachments/2.png)
+      ![image.png](/.attachments/2.png)
 
     - Specify your tool diameter (1mm), Cut Z: (-1.6mm), Multi-Depth (depth per cut - 0.2mm), Gap size (1mm)
     - Click on Generate Freeform Geometry. This will generate a geometry for cutting the board
     - Double click the newly created Geometry
-![image.png](/.attachments/3.png)
+      ![image.png](/.attachments/3.png)
     - Specify: 
       - Cut Z: -1.6
       - Multi-Depth: 0.200
@@ -39,7 +39,7 @@ Here are the basic steps to mill a PCB
       - PostProcessor: grbl_11
     - Click on Generate CNCJob object
     - Double click the Gerber_Drill_PTH (under Excellon)
-![image.png](/.attachments/4.png)
+      ![image.png](/.attachments/4.png)
     - Specify: 
       - Cut Z: -1.700
       - Travel Z: 2.000
@@ -47,13 +47,13 @@ Here are the basic steps to mill a PCB
       - Spindle speed: 10000
       - Drill tool dia: 1.00 (or whatever your tool is)
       - PostProcessor: grbl_11
-![image.png](/.attachments/5.png)
+        ![image.png](/.attachments/5.png)
     - Click on Create Drills GCode
     - Double click the TopLayer (or BottomLayer, whatever you want to mill)
     - Specify:
       - Tool dia: 0.1000 (or whatever the tip of your V-bit is)
       - Passes: 1
-![image.png](/.attachments/6.png)
+        ![image.png](/.attachments/6.png)
     - Click on Generate Isolation Geometry
     - Specify:
       - Cut Z: -0.2000 (how deep the engraving v-bit will go into the PCB)
@@ -69,10 +69,10 @@ Here are the basic steps to mill a PCB
     - Click on Connect to connect to the CNC (make sure you have selected the proper COM port under settings)
     - Make sure you've put the proper tool for this operation, for example Drill bit for drilling, flat-end mill bit for milling, v-bit for engraving etc.
     - Click on Open and select the file for the operation you want to do. (Order should be Engraving > Drilling > Cutting)
-![image.png](/.attachments/7.png)
+      ![image.png](/.attachments/7.png)
     - Go to Probing > Create New > Apply (this sets the proper size for probing based no the GCode) > Ok
     - Click on RUN. This will start the probing process which will capture the surface deviations
-![image.png](/.attachments/8.png)
+      ![image.png](/.attachments/8.png)
     - Once ready click on Edit > Apply HeightMap. This will modify your GCode to align it with the PCB surface
-![image.png](/.attachments/9.png)
+      ![image.png](/.attachments/9.png)
     - Click on Start and this will start the milling operation
